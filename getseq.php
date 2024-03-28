@@ -1,4 +1,6 @@
+<?php
 if (preg_match('!(\d+)\s*=\s*(\d+)!i', $input, $m)){
     echo $a = $m[1];
     echo $b = $m[2];
 }
+?>
