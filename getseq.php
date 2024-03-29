@@ -6,10 +6,12 @@ $string = "Successful!Your BPDBprepaid Prepaid Token is 5747-3793-9461-2547-2825
 preg_match('/(?<=SquNo:)\S+/i', $string, $match);
 $seq = $match[0];
 //echo $seq;
-$first_seq =  substr($seq, 0, 1);
-$sec_seq = substr($seq, 2, 2);
- for ($i=$first_seq; $i<$sec_seq; $i++){
+
+ $first_seq =  substr($seq, 0, 2);
+ $get_first_seq = preg_replace("/[^0-9]/", "", $first_seq );
+ $sec_seq = substr($seq, 2, 3);
+ 
+ for ($i=$get_first_seq; $i<$sec_seq; $i++){
      echo $i;
  }
-
 ?>
